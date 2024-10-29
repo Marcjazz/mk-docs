@@ -1,4 +1,4 @@
-# My MkDocs Project
+# Marco's Project
 
 This repository contains the source files for my MkDocs documentation project, using the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 

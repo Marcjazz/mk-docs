@@ -2,6 +2,7 @@ on:
   push:
     branches:
     - master
+
 jobs:
   build: 
     runs-on: ubuntu-22.04
@@ -22,8 +23,10 @@ jobs:
 
       - name: Build Project
         uses: docker/build-push-action@v4
-        with: 
-          tag: |
+        with:
+          context: .
+          push: true
+          tags: |
             ghcr.io/${{ github.repository }}:latest
             ghcr.io/${{ github.repository }}:${{ github.run_number }}
           

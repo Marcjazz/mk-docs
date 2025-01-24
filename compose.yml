@@ -1,0 +1,16 @@
+services:
+  mkdocs:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+#    container_name: mydocs
+    ports:
+      - '8080-8081:80'
+    networks:
+      - mkdocs_network
+    deploy:
+      mode: replicated
+      replicas: 2
+networks:
+  mkdocs_network:
+    driver: bridge

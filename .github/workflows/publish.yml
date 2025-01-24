@@ -1,3 +1,5 @@
+name: Publish to ghcr.io
+
 on:
   push:
     branches:
@@ -27,7 +29,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.run_number }}
+            ghcr.io/${{ vars.REPOSITORY }}:latest
+            ghcr.io/${{ vars.REPOSITORY }}:${{ github.run_number }}
           
 
